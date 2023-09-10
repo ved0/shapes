@@ -21,8 +21,4 @@ public class Point {
         this.x = x;
         this.y = y;
     }
-
-    public Point getPosition() {
-        return this;
-    }
 }

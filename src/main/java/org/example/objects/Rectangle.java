@@ -2,7 +2,7 @@ package org.example.objects;
 
 import java.util.Objects;
 
-public class Rectangle extends Shape implements Comparable {
+public class Rectangle extends Shape {
     private double length;
     private double width;
 
@@ -59,10 +59,5 @@ public class Rectangle extends Shape implements Comparable {
     @Override
     public int hashCode() {
         return Objects.hash(length, width);
-    }
-
-    @Override
-    public int compareTo(Object o) {
-        return Double.compare(this.getArea(), ((Shape) o).getArea());
     }
 }

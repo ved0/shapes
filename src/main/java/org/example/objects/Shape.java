@@ -3,7 +3,7 @@ package org.example.objects;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Shape {
+public abstract class Shape implements Comparable<Shape> {
     private final Point origin;
 
     public Shape(Point origin) {
@@ -36,6 +36,10 @@ public abstract class Shape {
 
     public static Rectangle createRectangle(Point origin, double length, double width) {
         return new Rectangle(origin, length, width);
+    }
+    @Override
+    public int compareTo(Shape shape) {
+        return Double.compare(this.getArea(), shape.getArea());
     }
 
     public abstract double getArea();
